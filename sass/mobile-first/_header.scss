@@ -1,6 +1,6 @@
 .header {
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    align-items: center;
     position: relative;
 }
 
@@ -8,10 +8,13 @@
     border-bottom: 1px solid #ececec;
 }
 
+// /* навигация для mobile */
+
 .header__button{
 display: inline-block;
 padding: 0;
 margin: 0;
+margin-left: auto;
 
 border: none;
 background-color: transparent;
@@ -36,7 +39,7 @@ background-color: transparent;
 }
 
 
-// /* навигация */
+
 .header__container{
     display: none;
     position: absolute;
@@ -53,9 +56,15 @@ display: block;
     }
 }
 
+// навигация для tablet и desktop
 .header__nav-list {
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+    
+            display: none;
+        }
 }
 
 .header__nav-item {
@@ -111,31 +120,47 @@ display: block;
 
 
 .header__contact-list {
-    // display: flex;
-    // align-items: center;
-    // margin-left: auto;
+    
+
+    @media screen and (max-width: 767px) {
+    
+            display: none;
+        }
+
+  @media screen and (min-width: $tablet) {
+
+     margin-left: auto;
+  }
+
+       @media screen and (min-width: $desktop) {
+             display: flex;
+            align-items: center;
+            margin-left: auto;
+                    
+       }
 }
 
 .header__contact-item {
+    @media screen and (min-width: $desktop) {
     margin-right: 30px;
 
     &:last-child {
         margin-right: 0;
     }
+    }
+    
 }
 
 
 
 .header__contact-link {
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    align-items: center;
 
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    
     letter-spacing: 0.02em;
     color: #757575;
     text-decoration: none;
@@ -152,6 +177,18 @@ display: block;
     &:focus .header__contact-icon {
         fill: $accentColor;
     }
+
+         @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            font-size: 12px;
+             line-height: 1.16;
+             
+         }
+        @media screen and (min-width: $desktop) {
+            padding-top: 32px;
+                padding-bottom: 32px;
+            font-size: 14px;
+                line-height: 1.14;
+        }
 }
 
 

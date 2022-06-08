@@ -91,6 +91,12 @@ img {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -102,6 +108,7 @@ img {
   display: inline-block;
   padding: 0;
   margin: 0;
+  margin-left: auto;
   border: none;
   background-color: transparent;
 }
@@ -137,6 +144,21 @@ img {
 
 .header__container.is-open {
   display: block;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-list {
+    display: none;
+  }
 }
 
 .header__nav-item {
@@ -182,20 +204,47 @@ img {
   left: 0;
 }
 
-.header__contact-item {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .header__contact-list {
+    display: none;
+  }
 }
 
-.header__contact-item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .header__contact-list {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact-item {
+    margin-right: 30px;
+  }
+  .header__contact-item:last-child {
+    margin-right: 0;
+  }
 }
 
 .header__contact-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
@@ -210,6 +259,22 @@ img {
 .header__contact-link:hover .header__contact-icon,
 .header__contact-link:focus .header__contact-icon {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__contact-link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .header__contact-icon {
@@ -234,6 +299,18 @@ img {
 
 .logo__white {
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .footer__logo {
@@ -415,7 +492,7 @@ img {
   padding-bottom: 94px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .activity-section {
     display: none;
   }
@@ -994,7 +1071,7 @@ img {
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .modal {
     max-width: 450px;
     width: 100%;
