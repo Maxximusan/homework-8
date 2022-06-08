@@ -1,0 +1,41 @@
+.activity-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.activity-section__list {
+    display: $dFlex;
+    justify-content: space-between;
+}
+
+.activity-section__item {
+    position: relative;
+}
+
+.activity-section__box-text {
+    background: rgba(47, 48, 58, 0.8);
+
+    width: 370px;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.activity-section__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: $let-Spa;
+    text-transform: $textUpp;
+
+    color: $primaryColor;
+}
+
+.activity-section__title {
+    @extend %three-section-properties
+}

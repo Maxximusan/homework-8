@@ -1,0 +1,95 @@
+.team-section {
+    background-color: #f5f4fa;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team-section__title {
+    @extend %three-section-properties
+}
+
+.team-section__list {
+    display: $dFlex;
+    justify-content: space-between;
+}
+
+.team-section__item {
+    background-color: $primaryColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-section__person {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-section__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: $let-Spa;
+
+    color: $secondaryColor;
+
+    margin-bottom: 10px;
+}
+
+.team-section__profession {
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: $let-Spa;
+    margin-bottom: 16px;
+}
+
+.team-section__social-list {
+    display: $dFlex;
+    justify-content: center;
+    align-items: $aiCenter;
+}
+
+.team-section__social-item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+
+
+
+
+.team-section__social-link {
+    display: $dFlex;
+    justify-content: center;
+    align-items: $aiCenter;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background-color: $primaryColor;
+
+    transition: background-color var(--duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+    }
+
+    &:hover .team-section__social-icon,
+    &:focus .team-section__social-icon {
+        fill: $primaryColor;
+    }
+}
+
+
+
+.team-section__social-icon {
+    fill: #afb1b8;
+
+    transition: fill var(--duration) var(--timing-function);
+}

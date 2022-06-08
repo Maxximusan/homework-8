@@ -1,0 +1,209 @@
+// /* модальное окно */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.3);
+}
+
+.modal {
+    position: absolute;
+
+    width: 528px;
+    height: 581px;
+    background-color: $primaryColor;
+    padding: 40px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 500ms ease-in-out;
+}
+
+.modal-btn {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover .modal-btn__icon,
+    &:focus .modal-btn__icon {
+            fill: $accentColor;
+            transition: fill var(--duration) var(--timing-function);
+        }
+}
+
+
+
+.modal-btn__icon {
+    position: absolute;
+    bottom: 17%;
+    right: 18%;
+}
+
+.feedback-title {
+    display: $dBlock;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: $let-Spa;
+
+    color: $secondaryColor;
+
+    margin-bottom: 30px;
+}
+
+.feedback-form__field {
+    display: $dFlex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    position: relative;
+
+    &--margin {
+            margin-bottom: 20px;
+        }
+    &:last-child {
+        display: $dBlock;
+        margin: 0;
+    }
+}
+
+
+
+.feedback-form__title {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.feedback-form__field input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 42px;
+    outline: none;
+}
+
+.feedback-form__field:focus-within>.feedback-form__icon {
+    fill: $accentColor;
+    transition: fill var(--duration) var(--timing-function);
+}
+
+.feedback-form__field:hover .feedback-form__icon {
+    fill: $accentColor;
+    transition: fill var(--duration) var(--timing-function);
+}
+
+.feedback-form__field:hover .feedback-form__input,
+.feedback-form__field:focus .feedback-form__input {
+    border-color: $accentColor;
+    transition: border-color var(--duration) var(--timing-function);
+}
+
+.feedback-form__input:hover,
+.feedback-form__input:focus {
+    border-color: $accentColor;
+}
+
+.feedback-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+}
+
+.feedback-form__textarea {
+    padding: 12px 16px;
+    resize: none;
+}
+
+.feedback-checkbox {
+    display: $dBlock;
+
+    margin-bottom: 30px;
+}
+
+.feedback-checkbox__hidden {
+    @extend %hidden
+}
+
+.feedback-checkbox__hidden:checked+.feedback-checkbox__icon {
+    background-color: $accentColor;
+    border-color: $accentColor;
+    background-origin: border-box;
+}
+
+.feedback-checkbox__hidden:focus+.feedback-checkbox__icon {
+    border-color: $accentColor;
+}
+
+.feedback-checkbox__icon {
+    display: inline-flex;
+    align-items: $aiCenter;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid $secondaryColor;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.feedback-checkbox__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: $let-Spa;
+}
+
+.feedback-checkbox__link {
+    color: $accentColor;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: $let-Spa;
+}
+
+.feedback-form__button {
+    display: $dBlock;
+
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    padding-top: 10px;
+    padding-right: 55px;
+    padding-bottom: 10px;
+    padding-left: 56px;
+
+    margin: 0 auto;
+
+    cursor: pointer;
+    color: $primaryColor;
+    background-color: $accentColor;
+    border-color: $accentColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}

@@ -1,0 +1,49 @@
+// /* hero and main*/
+.hero-section {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #2f303a;
+}
+
+// /* фон героя */
+.hero-section__overlay {
+    max-width: 1600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/background-header/Img-1.jpg);
+    background-position: center;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
+}
+
+.hero-section__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: $textUpp;
+    color: $primaryColor;
+
+    margin-bottom: 30px;
+}
+
+.hero-section__button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $primaryColor;
+    background-color: $accentColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+}
