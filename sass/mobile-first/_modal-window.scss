@@ -181,16 +181,35 @@
 }
 
 .feedback-checkbox__text {
-    font-size: 14px;
-    line-height: 1.71;
     letter-spacing: $let-Spa;
+    
+    @media screen and (min-width: $mobile) and (max-width: 1199px) {
+            font-size: 12px;
+            line-height: 1.16;
+            
+        }
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+            line-height: 1.71;
+        }
+    
+    
 }
 
 .feedback-checkbox__link {
     color: $accentColor;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: $let-Spa;
+        letter-spacing: $let-Spa;
+        
+        @media screen and (min-width: $mobile) and (max-width: 1199px) {
+          font-size: 12px;
+            line-height: 1.16;
+            
+            }
+
+        @media screen and (min-width: $desktop) {
+                font-size: 14px;
+                line-height: 1.71;
+            }
 }
 
 .feedback-form__button {
