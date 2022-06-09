@@ -873,14 +873,16 @@ img {
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .clients-section__item {
-    width: calc((100% - 4 * 15px) / 2);
+    -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
+        flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients-section__item {
-    width: calc((100% - 6 * 15px) / 3);
+    -ms-flex-preferred-size: calc((100% - 6 * 15px) / 3);
+        flex-basis: calc((100% - 6 * 15px) / 3);
     margin: 15px;
   }
 }
@@ -1618,7 +1620,8 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-content__item {
-    width: calc((100% - 4 * 15px) / 2);
+    -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
+        flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
 }
