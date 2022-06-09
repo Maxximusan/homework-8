@@ -141,6 +141,7 @@ text-decoration: none;
 .mobile-menu__socials-link-devider{
     margin-right: 10px;
     margin-left: 6px;
+    color:  rgba(33, 33, 33, 0.2);
 }
 
 // навигация для tablet и desktop
@@ -228,6 +229,14 @@ text-decoration: none;
 }
 
 .header__contact-item {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 10px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     @media screen and (min-width: $desktop) {
     margin-right: 30px;
 
@@ -260,16 +269,22 @@ text-decoration: none;
         color: $accentColor;
     }
 
-    &:hover .header__contact-icon,
-    &:focus .header__contact-icon {
+    &:hover .header__contact-icon-mail,
+    &:focus .header__contact-icon-mail {
         fill: $accentColor;
     }
+
+         &:hover .header__contact-icon-tel,
+         &:focus .header__contact-icon-tel {
+             fill: $accentColor;
+         }
 
          @media screen and (min-width: $tablet) and (max-width: 1199px) {
             font-size: 12px;
              line-height: 1.16;
-             
+           
          }
+
         @media screen and (min-width: $desktop) {
             padding-top: 32px;
                 padding-bottom: 32px;
@@ -279,8 +294,29 @@ text-decoration: none;
 }
 
 
-.header__contact-icon {
-    margin-right: 10px;
+.header__contact-icon-mail,
+.header__contact-icon-tel
+ {
 
+    margin-right: 8px;
     transition: fill var(--duration) var(--timing-function);
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+    }
+
+
 }
+.header__contact-icon-tel{
+ @media screen and (min-width: $tablet) and (max-width: 1199px) {
+     
+     height: 14px;
+ }
+ }
+
+ .header__contact-icon-mail{
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            width: 14px;
+            height: 10px;
+        }
+ }
