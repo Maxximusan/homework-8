@@ -11,31 +11,16 @@
 // @import './components/modal-window';
 // @import './components/portfolio';
 
-// варс - готово для 3х (думаю что только контейнер тут)
+
 @import './mobile-first/utils/vars';
-
-
 @import './mobile-first/utils/placeholders';
 @import './mobile-first/header';
 @import './mobile-first/logo';
 @import './mobile-first/hero-section';
-
-
-// преимущества готово
 @import './mobile-first/benefits-section';
-
-// активити(чем мы занимаемся) готово для 3х
 @import './mobile-first/activity-section';
-
-// ОСТАЛОСЬ - центрирование img и остальное по img после вебинара (надеюсь переделывать не нужно то что сделал)
 @import './mobile-first/team-section';
-
-// ОК - вопрос по формуле и почему выходит
 @import './mobile-first/clients-section';
-
 @import './mobile-first/footer';
-
-// Модальное окно - ОК (вопрос по тексту)
 @import './mobile-first/modal-window';
-
 @import './mobile-first/portfolio';
