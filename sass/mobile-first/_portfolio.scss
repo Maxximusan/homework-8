@@ -161,6 +161,14 @@
 .portfolio-link__image {
     position: relative;
     overflow: hidden;
+
+    // сделал когда не загружались картинкив девтулзах
+    @media screen and (min-width: 768px){
+        width: 354px;
+    }
+        @media screen and (min-width: 1200px) {
+            width: 370px;
+        }
 }
 
 .portfolio-link__image:hover .portfolio-link__text-overlay,
