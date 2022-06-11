@@ -52,7 +52,10 @@ background-color: transparent;
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding: 32px;
+        padding-top: 48px;
+        padding-right: 40px;
+        padding-bottom: 48px;
+        padding-left: 40px;
         background-color: $primaryColor;
         z-index: 999;
     
@@ -72,6 +75,7 @@ background-color: transparent;
     
     .mobile-menu.is-open {
         transform: translateX(0);
+        
 
         // &.header__button--cross {
         //             display: block;
