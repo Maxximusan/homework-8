@@ -42,7 +42,7 @@
     border-radius: 0px 0px 4px 4px;
 
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
             width: 450px;
             margin-bottom: 30px;
             &:last-child {
