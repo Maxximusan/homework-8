@@ -2,6 +2,10 @@
 .benefits-section {
     padding-top: 60px;
 
+    @media screen and (min-width: $mobile) and (max-width: 1199px) {
+                        padding-bottom: 60px;
+    
+        }
     @media screen and (min-width: $desktop) {
       padding-top: 94px;
            
@@ -33,8 +37,12 @@
 .benefits-section__item {
 
 
-@media screen and (min-width: $mobile) {
-width: 450px;
+@media screen and (min-width: $mobile) and (max-width: 767px){
+    width: 450px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
 }
  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: 354px;

@@ -164,12 +164,12 @@
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__image">
                   <picture>
-                    <!-- desktop -->
+                    <!-- mobile -->
                     <source
-                      media="(min-widht: 1200px)"
+                      media="(max-widht: 767px)"
                       srcset="
-                        ./images/mobile-first/portfolio/optimized/portfolio-1_lg-min.jpg    1x,
-                        ./images/mobile-first/portfolio/optimized/portfolio-1_lg@2x-min.jpg 2x
+                        ./images/mobile-first/portfolio/optimized/portfolio-1_sm-min.jpg    1x,
+                        ./images/mobile-first/portfolio/optimized/portfolio-1_sm@2x-min.jpg 2x
                       "
                       type="image/jpg"
                     />
@@ -182,15 +182,17 @@
                       "
                       type="image/jpg"
                     />
-                    <!-- mobile -->
+
+                    <!-- desktop -->
                     <source
-                      media="(max-widht: 767px)"
+                      media="(min-widht: 1200px)"
                       srcset="
-                        ./images/mobile-first/portfolio/optimized/portfolio-1_sm-min.jpg    1x,
-                        ./images/mobile-first/portfolio/optimized/portfolio-1_sm@2x-min.jpg 2x
+                        ./images/mobile-first/portfolio/optimized/portfolio-1_lg-min.jpg    1x,
+                        ./images/mobile-first/portfolio/optimized/portfolio-1_lg@2x-min.jpg 2x
                       "
                       type="image/jpg"
                     />
+
                     <img
                       src="./images/mobile-first/portfolio/optimized/portfolio-1_sm-min.jpg"
                       alt="команда"
